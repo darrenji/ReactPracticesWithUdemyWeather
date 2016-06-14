@@ -5,7 +5,8 @@ export default function(state=[], action){
     switch(action.type){
        // 或者写成
        // [action.payload.data, ...state]
-       return state.concat([action.payload.data]);
+        case FETCH_WEATHER:
+          return state.concat([action.payload.data]);
     }
     return state;
 }
